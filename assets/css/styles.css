@@ -14,61 +14,6 @@ body {
   margin: 0 auto;
 }
 
-/* Loading Animation */
-.loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(135deg, #555, #333);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.loading-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  animation: expandBounce 2.5s ease forwards;
-  visibility: visible;  /* Ensure the image is visible */
-}
-
-/* Keyframes for expanding and bouncing the image */
-@keyframes expandBounce {
-  0% {
-    width: 150px;
-    height: 150px;
-  }
-  50% {
-    width: 100vw;
-    height: 100vw;
-    border-radius: 0%;
-  }
-  75% {
-    transform: translateY(-30px);
-  }
-  100% {
-    width: 150px;
-    height: 150px;
-    transform: translateY(-100vh);
-  }
-}
-
-/* Main Page Fade-In */
-body.fade-in {
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-body {
-  opacity: 0;
-}
-
 /* Header */
 header {
   background-color: #282c34;
@@ -79,6 +24,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .profile-img {
@@ -95,7 +41,39 @@ header {
   transform: scale(1.1);
 }
 
-/* Content section animations */
+.name {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #f4b400;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f4b400;
+}
+
+/* Section Styles */
 .section {
   padding: 50px 0;
   opacity: 0;
@@ -106,6 +84,58 @@ header {
 .section.fade-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+.bg-light {
+  background-color: #f9f9f9;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-list li {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.experience-list h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #f4b400;
 }
 
 /* Footer */
@@ -119,6 +149,11 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* Transitions */
+.header-scrolled {
+  background-color: #111;
 }
 
 /* Responsive Design */
