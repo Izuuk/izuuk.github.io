@@ -1,3 +1,20 @@
+// Function to handle loading animation and page fade-in
+window.addEventListener('load', () => {
+  const loadingScreen = document.querySelector('.loading-screen');
+  
+  // Wait for the bounce animation to finish (2.5 seconds)
+  setTimeout(() => {
+    loadingScreen.style.opacity = '0';
+    
+    // Once the loading screen is fully faded out, remove it
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+      document.body.classList.add('fade-in');
+    }, 500); // wait for the fade-out transition (0.5 seconds)
+    
+  }, 2500);
+});
+
 // Smooth Scrolling for Anchor Links
 document.querySelectorAll('nav ul li a').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
