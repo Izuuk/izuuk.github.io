@@ -9,9 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Loading Animation -->
+  <div class="loading-screen">
+    <img src="assets/images/profile.jpg" alt="Profile Image" class="loading-img">
+  </div>
+
+  <!-- Main Content -->
   <header>
     <div class="container">
-      <img src="assets/images/profile.jpeg" alt="Profile Image" class="profile-img">
+      <img src="assets/images/profile.jpg" alt="Profile Image" class="profile-img">
       <h1 class="name">John Doe</h1>
       <p class="title">Music Teacher</p>
       <nav>
@@ -24,7 +30,7 @@
     </div>
   </header>
 
-  <section id="about" class="section">
+  <section id="about" class="section fade-in">
     <div class="container">
       <h2>About Me</h2>
       <p>
@@ -34,7 +40,7 @@
     </div>
   </section>
 
-  <section id="experience" class="section bg-light">
+  <section id="experience" class="section bg-light fade-in">
     <div class="container">
       <h2>Experience</h2>
       <ul class="experience-list">
@@ -52,7 +58,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section fade-in">
     <div class="container">
       <h2>Contact Me</h2>
       <p>Interested in lessons or collaborations? Feel free to get in touch!</p>
@@ -69,5 +75,7 @@
       <p>&copy; 2024 John Doe. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
