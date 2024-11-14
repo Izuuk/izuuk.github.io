@@ -5,10 +5,14 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: #333;
-    cursor: url("assets/images/cursor.png"), auto;
 
   }
   
+html, body {
+  cursor: url("assets/images/cursor.cur"), auto;
+
+}
+
   .container {
     width: 90%;
     max-width: 1200px;
@@ -17,7 +21,7 @@ body {
   
   /* Header */
   header {
-    background-color: #333;
+    background-color: #4b327c;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -152,8 +156,8 @@ body {
 
 
 
-.collapsible {
-  background-color: #777;
+.collapsible {  
+  background-color: #7e5fd4a9;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -165,7 +169,7 @@ body {
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #7e5fd4c2;
 }
 
 .content {
