@@ -7,13 +7,47 @@
   <title>Music Teacher Portfolio</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Jura:wght@300..700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-  <header>
+
+  <div class="header">
+
+    <!--Content before waves-->
+    <div class="inner-header flex">      <img src="assets/images/profile2.jpg" alt="Profile Image" class="profile-img">
+
+      <h1 class="name" style="font-family: 'Jua'">𝄆 Eden Mai Music 𝄇</h1>
+      <p class="title" style="font-family: 'Jua';">BA Music Composition<br>Music Tutor</p>
+    </div>
+    
+    <!--Waves Container-->
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+    <!--Waves end-->
+    
+    </div>
+  
+  <!-- <header>
     <div class="container">
-      <img src="assets/images/profile.jpg" alt="Profile Image" class="profile-img">
-      <h1 class="name">Eden Mai Music</h1>
-      <p class="title">Music Teacher</p>
+
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -22,7 +56,7 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </header> -->
 
   <section id="about" class="section">
     <div class="container">
@@ -39,7 +73,7 @@
     </div>
   </section>
 
-  <section id="experience" class="section bg-light">
+  <section id="experience" class="section">
     <div class="container">
       <h2>WHAT I CAN DO:</h2>
       <ul class="experience-list">
@@ -160,7 +194,11 @@
       });
     }
 
+    window.addEventListener("load", (event) => {
 
+      new cursoreffects.fairyDustCursor({ element: document.querySelector("#fairyDust") })
+
+});
     
     </script>
 </body>
