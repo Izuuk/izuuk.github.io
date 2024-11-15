@@ -67,7 +67,7 @@ html, body {
   
   /* Section Styles */
   .section {
-    padding: 50px 0;
+    padding: 10px 0;
   }
   
   .bg-light {
@@ -122,8 +122,8 @@ html, body {
   
   /* Footer */
   footer {
-    background-color: #333;
-    color: white;
+
+    color: black;
     padding: 20px 0;
     text-align: center;
     font-size: 0.9rem;
@@ -145,7 +145,7 @@ html, body {
     }
   
     .title {
-      font-size: 1rem;
+      font-size: 1rem !important;
     }
   
     nav ul li {
@@ -240,7 +240,21 @@ p {
   height:30vh;
   width:100%;
   margin: 0;
-  padding: 0;
+  padding: 15px;
+}
+
+.title {
+  padding-left: 50px;
+  padding-right: 20px;
+  font-size: 2rem;
+}
+
+.profile-img {
+  padding: 50px;
+}
+
+.name {
+  font-size: 5.5rem;
 }
 
 .flex { /*Flexbox for containers*/
@@ -301,6 +315,9 @@ p {
   }
   h1 {
     font-size:24px;
+  }
+  .name {
+    font-size: 2.5rem;
   }
 }
 
