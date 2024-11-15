@@ -180,6 +180,28 @@ html, body {
   background-color: #f1f1f1;
 }
 
+/* Apply custom scrollbar to .content */
+.content {
+  overflow-y: auto; /* Enables scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #7e5fd4a9 transparent; /* Scrollbar track and thumb colors */
+}
+
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+.content::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+}
+
+.content::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #7e5fd4a9; /* Thumb color */
+  border-radius: 10px; /* Rounded edges for the thumb */
+  border: 2px solid transparent; /* Adds spacing around the thumb */
+}
+
 
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
@@ -203,7 +225,7 @@ p {
 .header {
   position:relative;
   text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgb(132, 0, 193) 100%);
   color:white;
 }
 .logo {
@@ -215,7 +237,7 @@ p {
 }
 
 .inner-header {
-  height:65vh;
+  height:30vh;
   width:100%;
   margin: 0;
   padding: 0;
@@ -275,9 +297,11 @@ p {
     min-height:40px;
   }
   .content {
-    height:30vh;
+    padding: 20px;
+    line-height: 1.6;
   }
   h1 {
     font-size:24px;
   }
 }
+
