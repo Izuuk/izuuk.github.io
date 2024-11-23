@@ -18,12 +18,30 @@
 </head>
 <body>
 
+  <div class="loading-screen" id="loadingScreen">
+    <h1 class="name" style="font-family: 'Jua'">𝄆 Eden Mai Music 𝄇</h1>
+    <div class="animation">
+      <span class="symbol">♩</span>
+      <span class="symbol">♪</span>
+      <span class="symbol">♫</span>
+      <span class="symbol">♬</span>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+  
+
+
+
+  
   <div class="header">
 
     <!--Content before waves-->
     <div class="inner-header flex">      <img src="assets/images/profile2.jpg" alt="Profile Image" class="profile-img">
 
       <h1 class="name" style="font-family: 'Jua'">𝄆 Eden Mai Music 𝄇</h1>
+
       <p class="title" style="font-family: 'Jua';"> Music Composition Tutor</p>
     </div>
     
@@ -63,10 +81,13 @@
 
   <section id="experience" class="section">
     <div class="container">
-      <h2 style="font-size: 2.5rem;">Looking For Tutoring? Have a Look Below:</h2>
+      <h2 style="font-size: 2.5rem;"> Looking For Tutoring? Have a Look Below:</h2>
       <ul class="experience-list">
         <li>
-          <button class="collapsible"><h3 style="color: white;">Private Music Theory and Composition Tutoring (Including GSCE & A-Level)</h3></button>
+          <button class="collapsible"><h3 style="color: white;">     
+
+            <span class="symbol">♬</span>
+Private Music Theory and Composition Tutoring (Including GSCE & A-Level)</h3></button>
           <div class="content">
             <br>
 <strong>            My tutoring services cater to all ages, from enthusiastic beginners to advanced students preparing for GCSE and A Level music qualifications. Adult learners are welcome! I can help to sharpen your composition skills, deepen your understanding of music theory, or excell in your theory exams and portfolio.
@@ -88,7 +109,8 @@
           </div>
         </li>
         <li>
-          <button class="collapsible"><h3 style="color: white;">Music Composition Commissions</h3></button>
+          <button class="collapsible"><h3 style="color: white;">      <span class="symbol">♪</span> 
+            Music Composition Commissions</h3></button>
           <div class="content">
  
             <br><strong>Why Choose Me?</strong>
@@ -129,7 +151,8 @@
           </div>
         </li>
       <li>
-          <button class="collapsible"><h3 style="color: white;">Music Production</h3></button>
+          <button class="collapsible"><h3 style="color: white;">      <span class="symbol">♫</span>
+             Music Production</h3></button>
           <div class="content">
         <br><strong>As a music producer, I offer a variety of services to help bring your musical vision to life. Here’s what I can do for you:</strong>
         <br>
@@ -231,5 +254,26 @@ EWC (Education Workforce Council) Member 2024
 });
     
     </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const progressBar = document.getElementById("progressBar");
+    const loadingScreen = document.getElementById("loadingScreen");
+    let progress = 0;
+
+    // Simulate loading progress
+    const interval = setInterval(() => {
+      progress += 1;
+      progressBar.style.width = `${progress}%`;
+
+      if (progress >= 100) {
+        clearInterval(interval);
+        // Hide the loading screen and show the main page
+        loadingScreen.classList.add("hidden");
+        document.body.style.overflow = "auto"; // Enable scrolling
+      }
+    }, 25); // Adjust speed of progress (lower for faster loading)
+  });
+</script>
+
 </body>
 </html>
